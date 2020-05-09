@@ -8,7 +8,7 @@ import './appeals.scss';
 class Appeals extends Component {
   textAreaRef = React.createRef();
   state = {
-    banType: 'Bot Ban',
+    banType: "Bot Ban",
     brokenRules: []
   }
 
