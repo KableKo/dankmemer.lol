@@ -118,15 +118,6 @@ class Appeals extends Component {
           <label>
             <input
               type="radio"
-              value="Bot Blacklist"
-              checked={this.state.banType === 'Bot Blacklist'}
-              onChange={this.handleRadio.bind(this)}
-            />
-            Bot Blacklist
-          </label>
-          <label>
-            <input
-              type="radio"
               value="Server Ban"
               checked={this.state.banType === 'Server Ban'}
               onChange={this.handleRadio.bind(this)}
