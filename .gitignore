@@ -5,3 +5,4 @@ config\.json
 keys.json
 debug\.log
 .history/
+build/
