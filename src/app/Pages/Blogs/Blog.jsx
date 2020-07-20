@@ -18,16 +18,18 @@ export default class Blog extends React.Component {
   render () {
     return (
       <>
-        <header className="blog-header blurple">
-          {this.state.name}
-        </header>
-        <div className="blog-timestamp">
-          Posted {gibbeDatePls(this.state.date)} by {this.state.author}
-        </div>
-        {this.state.image && 
+        <div className="blog-header-container">
+          <header className="blog-header blurple">
+            {this.state.name}
+          </header>
+          <div className="blog-timestamp">
+            Posted {gibbeDatePls(this.state.date)} by {this.state.author}
+          </div>
+          {this.state.image && 
           <div className="blog-header-img">
             <img src={this.state.image} />
           </div>}
+        </div>
         <div
           className="blog-content"
           dangerouslySetInnerHTML={{
@@ -43,7 +45,8 @@ function gibbeDatePls(date) {
   date = new Date(date);
   const month = date.toLocaleString('default', { month: 'long' });
   const day = getOrdinalNum(date.getDate());
-  return `${month} ${day}`;
+  const year = date.getFullYear()
+  return `${month} ${day}, ${year}`;
 }
 
 // This function courtesy of SO bc I'm lazy https://stackoverflow.com/a/44418732/7187153
